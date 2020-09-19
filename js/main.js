@@ -1,5 +1,11 @@
 'use strict';
 
-  console.log (parseInt('5 , 10') + 3);
+const price = 1200;
 
-  
+console.log(price > 1000);
+console.log(price < 1000);
+console.log(price >= 1000);
+console.log(price <= 1000);
+console.log(price === 1000);
+console.log(price !== 1000);
+
