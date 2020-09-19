@@ -1,11 +1,14 @@
 'use strict';
 
-const score = 40;
+const score = 60;
+const name ='taguchi';
 
-if(score >= 80){
-  console.log('Great!');
-} else if(score >= 60){
-  console.log('Good,');
-}else{
-  console.log('OK,,,');
+
+
+// && なおかつ( AND)
+// || もしくは(OR)
+// ！〜ではない(NOT)
+
+if(score >= 50 && name === 'taguchi'){
+  console.log('Good job!');
 }
