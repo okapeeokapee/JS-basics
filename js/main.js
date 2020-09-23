@@ -1,8 +1,9 @@
 'use strict';
 
 {
-  const x = 100;
-  console.log(x);
+  document.getElementById('target').addEventListener('click', () => {
+    document.getElementById('target').style.background = 'pink';
+  });
 }
 
 
