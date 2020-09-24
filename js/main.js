@@ -1,27 +1,18 @@
 'use strict';{
+  const box = document.getElementById('box');
+  box.classList.add('box');
 
-  const num = 5;
-  const winner = Math.floor(Math.random() * 5);
+  const btn = document.getElementById('btn');
+  btn.classList.add('btn');
 
-  for(let i = 0; i < num; i++){
-    const div = document.createElement('div');
-    div.classList.add('box');
-
-    div.addEventListener('click', () =>{
-      if(i === winner){
-        div.classList.add('win')
-        div.textContent = 'Win!';
-      }else{
-        div.classList.add('lose');
-        div.textContent = 'Lose!';
-      }
-
-    });
-
-    document.body.appendChild(div);
-  }
-
+  btn.addEventListener('click', () =>{
+    const num = 10
+    for(let i = 0; i<num; i++){
+       const choice = Math.floor(Math.random() * )
+      box.textContent = num;
+    }
   
+  });
 }
 
 

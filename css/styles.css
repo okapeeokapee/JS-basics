@@ -1,22 +1,30 @@
-body{
-  display: flex;
-}
 .box{
-  width: 100px;
+  width: 150px;
   height: 100px;
-  background: #87ceeb;
-  margin: 0 8px;
-  transition: .8s;
-}
-.win{
-  background: pink;
-  border-radius: 50%;
-  transform: rotate(360deg);
+  background: skyblue;
+  margin: auto;
   text-align: center;
+  font-size: 20px;
+  font-weight: bold;
   line-height: 100px;
 }
-.lose{
+.btn{
+  margin: 10px auto;
+  width: 150px;
+  height: 60px;
+  border: solid ;
+  border-radius: 6px;
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
-  line-height: 100px;
-  transform: scale(.8);
+  line-height: 60px;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0px 10px 10px gray;
+}
+.btn:hover{
+  opacity: .9;
+}
+.btn:active{
+  box-shadow: 0 5px 10px;
 }
