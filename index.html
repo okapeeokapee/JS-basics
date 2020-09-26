@@ -3,57 +3,52 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>おみくじ</title>
+  <title>引き出し</title>
   <style>
-    body{
-      margin: 0;
-      text-align: center;
-    }
-    .circle{
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      background: red;
-      border: solid;
-      margin: 0 auto;
-      line-height: 150px;
-      font-size: 25px;
-    }
-    .btn{
-      width: 150px;
+    .title{
+      width: 140px;
       height: 60px;
-      margin: 10px auto;
       border: solid;
-      background: red;
-      border-radius: 6px;
+      text-align: center;
       line-height: 60px;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 2px 4px 6px;
+      margin: 0 auto;
+      border-radius: 6px;
       user-select: none;
     }
-    .btn:hover{
-      opacity: .9;
+    #memo{
+      text-align: center;
+      border: solid;
+      margin: 10px auto 20px;
     }
-    .btn:active{
-      box-shadow: 0 2px 6px;
+    .mask{
+      display: none;
+    }
+    .a{
+      width: 140px;
+      height: 60px;
+      border: solid;
+      text-align: center;
+      line-height: 60px;
+      margin: 20px auto;
+      border-radius: 6px;
+      user-select: none;
     }
   </style>
 </head>
 <body>
-  <h1>おみくじ</h1>
-  <div class="circle" id="circle">何が出るかな</div>
-  <div class="btn" id="btn">押してね！</div>
+  <div class="title" id="btn">太宰治 人間失格</div>
+  <div class="mask" id="memo">かかかかあかかかかかかっっかかかかかk</div>
+  <div class="a">aaaaa</div>
   <script>
-    const btn = document.getElementById('btn');
-    const circle = document.getElementById('circle');
+    'use strict';{
+      const btn = document.getElementById('btn');
+      const memo = document.getElementById('memo');
 
-    // for(let i =0; i<5; i++){
-  
-    btn.addEventListener('click', () =>{
-      const choice = Math.floor(Math.random() * 5 ) + 1;
-      circle.textContent =choice;
-    });
+      btn.addEventListener('click', () =>{
+        memo.classList.toggle('mask');
+      });
+
+    }
   </script>
 </body>
 </html>
