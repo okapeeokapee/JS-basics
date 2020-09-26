@@ -20,7 +20,10 @@
       border: solid;
       margin: 10px auto 20px;
     }
-    .mask{
+    #memo.mask{
+      display: none;
+    }
+    #memo1.mask{
       display: none;
     }
     .a{
@@ -38,14 +41,19 @@
 <body>
   <div class="title" id="btn">太宰治 人間失格</div>
   <div class="mask" id="memo">かかかかあかかかかかかっっかかかかかk</div>
-  <div class="a">aaaaa</div>
+  <div class="a" id="btn1">aaaaa</div>
+  <div class="mask" id="memo1">かかかかあかかかかかかっっかかかかかk</div>
   <script>
     'use strict';{
       const btn = document.getElementById('btn');
+      const btn1 = document.getElementById('btn1');
       const memo = document.getElementById('memo');
 
       btn.addEventListener('click', () =>{
         memo.classList.toggle('mask');
+      });
+      btn1.addEventListener('click', () =>{
+        memo1.classList.toggle('mask');
       });
 
     }
