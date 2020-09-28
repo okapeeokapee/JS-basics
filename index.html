@@ -5,61 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
-    .box{
-      width: 100px;
-      height: 100px;
-      background: skyblue;
-      margin: 0 auto;
-      transition: .9s;
-      text-align: center;
-      line-height: 100px;
-    }
     body{
-      display: flex;
-    }
-    .win{
-      width: 100px;
-      height: 100px;
-      background: pink;
-      margin: 0 auto;
-      border-radius: 50%;
-      transform: rotate(360deg);
       text-align: center;
-      line-height: 100px;
     }
-    .lose{
-      width: 100px;
-      height: 100px;
-      background: skyblue;
-      margin: 0 auto;
-      transform: rotate(360deg);
-      text-align: center;
-      line-height: 100px;
-      transform: scale(.9);
+    .hoge{
+      user-select: none;
+    }
+    .hide{
+      display: none;
+      user-select: none;
+    }
+    #memo{
+      border: solid;
+      user-select: none;
     }
   </style>
 </head>
 <body>
+  <div id="title" class="hoge">こんにちは</div>
+  <div id="memo" class="hide">かかかっかかかっかかあk</div>
+
   <script>
     'use strict';{
+      const title = document.getElementById('title');
+      const memo = document.getElementById('memo');
 
-      const winner = Math.floor(Math.random () * 5);
-
-      for(let i = 0; i<5; i++){
-      const div = document.createElement('div');
-      div.classList.add('box');
-      document.body.appendChild(div);
-
-      div.addEventListener('click' ,() => {
-        if(i ===winner){
-        div.classList.add('win');
-        div.textContent ='Win!';
-        }else{
-          div.classList.add('lose');
-          div.textContent ='Lose!';
-        }
+      title.addEventListener('click', () =>{
+        memo.classList.toggle('hide');
       });
-      }
+
     }
   </script>
 </body>
