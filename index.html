@@ -3,59 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>引き出し</title>
+  <title>Document</title>
   <style>
-    .title{
-      width: 140px;
-      height: 60px;
-      border: solid;
-      text-align: center;
-      line-height: 60px;
+    .box{
+      width: 100px;
+      height: 100px;
+      background: skyblue;
       margin: 0 auto;
-      border-radius: 6px;
-      user-select: none;
-    }
-    #memo{
+      transition: .9s;
       text-align: center;
-      border: solid;
-      margin: 10px auto 20px;
+      line-height: 100px;
     }
-    #memo.mask{
-      display: none;
+    body{
+      display: flex;
     }
-    #memo1.mask{
-      display: none;
-    }
-    .a{
-      width: 140px;
-      height: 60px;
-      border: solid;
+    .win{
+      width: 100px;
+      height: 100px;
+      background: pink;
+      margin: 0 auto;
+      border-radius: 50%;
+      transform: rotate(360deg);
       text-align: center;
-      line-height: 60px;
-      margin: 20px auto;
-      border-radius: 6px;
-      user-select: none;
+      line-height: 100px;
+    }
+    .lose{
+      width: 100px;
+      height: 100px;
+      background: skyblue;
+      margin: 0 auto;
+      transform: rotate(360deg);
+      text-align: center;
+      line-height: 100px;
+      transform: scale(.9);
     }
   </style>
 </head>
 <body>
-  <div class="title" id="btn">太宰治 人間失格</div>
-  <div class="mask" id="memo">かかかかあかかかかかかっっかかかかかk</div>
-  <div class="a" id="btn1">aaaaa</div>
-  <div class="mask" id="memo1">かかかかあかかかかかかっっかかかかかk</div>
   <script>
     'use strict';{
-      const btn = document.getElementById('btn');
-      const btn1 = document.getElementById('btn1');
-      const memo = document.getElementById('memo');
 
-      btn.addEventListener('click', () =>{
-        memo.classList.toggle('mask');
-      });
-      btn1.addEventListener('click', () =>{
-        memo1.classList.toggle('mask');
-      });
+      const winner = Math.floor(Math.random () * 5);
 
+      for(let i = 0; i<5; i++){
+      const div = document.createElement('div');
+      div.classList.add('box');
+      document.body.appendChild(div);
+
+      div.addEventListener('click' ,() => {
+        if(i ===winner){
+        div.classList.add('win');
+        div.textContent ='Win!';
+        }else{
+          div.classList.add('lose');
+          div.textContent ='Lose!';
+        }
+      });
+      }
     }
   </script>
 </body>
